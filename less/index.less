@@ -118,6 +118,8 @@ html, body {
 
 				&:hover {
 					color: @subtitle-color;
+					transform: scale(1.1);
+					transition: 0.3s ease;
 				}
 			}
 		}
@@ -125,6 +127,7 @@ html, body {
 		.two-columns {
 			.flex();
 			margin: 1rem 0rem;
+			max-height: 100%;
 
 			.text-header-content {
 				width: calc(100%/2);
@@ -184,6 +187,7 @@ html, body {
 		.content-column {
 			.flex();
 			flex-direction: column;
+			margin-right: 2.0rem;
 		
 			.content-tile{
 				margin: 1rem 0rem;

@@ -148,11 +148,11 @@ table {
   src: local('Helvetica LT Pro'), local('HelveticaLTPro-Roman'), url(https://fonts.gstatic.com/l/font?kit=JIAxUVNqfH9WuVQQRM4zVxOi&skey=22efecd2bc0e2cb0&v=v3) format('truetype');
 }
 @font-face {
-  font-family: 'Georgia';
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Georgia'), url(https://fonts.gstatic.com/l/font?kit=-zkl91Ksy8U47Wnsfmm8xA&skey=ca45512e77838097&v=v9) format('truetype');
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(https://fonts.gstatic.com/s/robotoslab/v9/BngMUXZYTXPIvIBgJJSb6ufN5qA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
@@ -175,9 +175,9 @@ body {
   width: 85%;
   margin: 0 auto;
   border: 1px solid black;
-  padding: 1rem;
+  padding: 2rem 3rem;
   background-color: #EFE7DA;
-  font-family: 'Roboto';
+  font-family: 'Roboto Slab';
 }
 .main-container header {
   width: 100%;
@@ -186,10 +186,11 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 2rem;
 }
 .main-container header nav .nav-item {
   text-decoration: none;
-  font-size: calc(1.75rem - 50%);
+  font-size: calc(2rem - 50%);
   color: black;
 }
 .main-container header nav .nav-item:hover {
@@ -201,14 +202,30 @@ body {
 }
 .main-container header .two-columns .text-header-content {
   width: calc(100%/2);
-  padding: 1rem;
+  padding-right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.main-container header .two-columns .text-header-content .title,
+.main-container header .two-columns .text-header-content .title {
+  text-align: center;
+  height: calc(100%/2 - 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-container header .two-columns .text-header-content .title h3 {
+  font-size: 2rem;
+}
 .main-container header .two-columns .text-header-content .intro {
   height: calc(100%/2 - 1rem);
+}
+.main-container header .two-columns .text-header-content .intro h2 {
+  padding: 1rem 0rem;
+}
+.main-container header .two-columns .text-header-content .intro p {
+  line-height: 1.33rem;
 }
 .main-container header .two-columns .img-header-content {
   display: flex;
@@ -217,13 +234,18 @@ body {
   height: 100%;
   overflow: hidden;
   border-radius: 50%;
+  border: 2px solid #002626;
+}
+.main-container header .two-columns .img-header-content img {
+  display: inline;
+  margin: 0 auto;
 }
 .main-container h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   color: #0E4749;
 }
 .main-container h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: #002626;
 }
 .main-container h3 {

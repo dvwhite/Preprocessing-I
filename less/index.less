@@ -50,9 +50,10 @@ table {
 // End Reset
 
 // Variables
-@lg-font-size: 3.0rem;
-@md-font-size: 1.75rem;
+@lg-font-size: 5.0rem;
+@md-font-size: 2.0rem;
 @sm-font-size: 1.0rem;
+@subtitle-font-size: 2.0rem;
 @title-color: #0E4749; // Jungle green
 @subtitle-color: #E55812; // Flame red
 @section-color: #002626; // Dark green
@@ -78,7 +79,7 @@ table {
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Helvetica&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Georgia&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 /* Set every element's box-sizing to border-box */
@@ -96,9 +97,9 @@ html, body {
 	width: 85%;
 	margin: 0 auto;
 	border: 1px solid black;
-	padding: 1rem;
+	padding: 2rem 3rem;
 	background-color: @container-bk-color;
-	font-family: 'Roboto';
+	font-family: 'Roboto Slab';
 
 	header {
 		width: 100%;
@@ -106,6 +107,7 @@ html, body {
 		nav {
 			.nav-items {
 				.centered-around();
+				margin-bottom: 2.0rem;
 			}
 
 			.nav-item {
@@ -125,14 +127,35 @@ html, body {
 
 			.text-header-content {
 				width: calc(100%/2);
-				padding: 1.0rem;
+				padding-right: 2.0rem;
 				.flex();
 				flex-direction: column;
 				justify-content: space-between;
 
-				.title, .intro {
+				.title {
+					text-align: center;
 					height: calc(100%/2 - 1.0rem);
+					.center();
+					flex-direction: column;
+					
+					h3 {
+						font-size: @subtitle-font-size;
+					}
 				}
+
+				.intro {
+					height: calc(100%/2 - 1.0rem);
+
+					h2 {
+						padding: 1rem 0rem;
+					}
+
+					p {
+						line-height: 1.33rem;
+					}
+				}
+
+
 			}
 
 			.img-header-content {
@@ -141,7 +164,13 @@ html, body {
 				position: relative;
 				height: 100%;
 				overflow: hidden;
-				border-radius: 50%
+				border-radius: 50%;
+				border: 2px solid @section-color;	
+
+				img {
+					display: inline;
+					margin: 0 auto;
+				}
 
 			}
 		}

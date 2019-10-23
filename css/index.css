@@ -126,11 +126,84 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* Mixins */
+.flex {
+  display: flex;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  max-width: 100%;
+  font-size: 62.5%;
 }
 html,
 body {
   height: 100%;
+}
+.main-container {
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 1rem;
+  background-color: #EFE7DA;
+}
+.main-container header {
+  width: 100%;
+}
+.main-container header nav .nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+}
+.main-container header nav .nav-item {
+  text-decoration: none;
+  font-size: calc(1.75rem - 50%);
+  color: black;
+}
+.main-container header nav .nav-item:hover {
+  color: #E55812;
+}
+.main-container header .two-columns {
+  display: flex;
+  margin: 1rem 0rem;
+}
+.main-container header .two-columns .text-header-content {
+  width: calc(100%/2);
+  border: 1px solid black;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-container header .two-columns .text-header-content .title,
+.main-container header .two-columns .text-header-content .intro {
+  border: 1px solid black;
+  height: calc(100%/2 - 1rem);
+}
+.main-container header .two-columns .img-header-content {
+  display: flex;
+  width: calc(100%/2);
+  border: 1px solid black;
+}
+.main-container h1 {
+  font-size: 3rem;
+  color: #0E4749;
+}
+.main-container h2 {
+  font-size: 1.75rem;
+  color: #E55812;
+}
+.main-container h3 {
+  font-size: 1rem;
 }

@@ -140,6 +140,27 @@ table {
   justify-content: space-around;
   align-items: center;
 }
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Helvetica LT Pro'), local('HelveticaLTPro-Roman'), url(https://fonts.gstatic.com/l/font?kit=JIAxUVNqfH9WuVQQRM4zVxOi&skey=22efecd2bc0e2cb0&v=v3) format('truetype');
+}
+@font-face {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Georgia'), url(https://fonts.gstatic.com/l/font?kit=-zkl91Ksy8U47Wnsfmm8xA&skey=ca45512e77838097&v=v9) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -156,6 +177,7 @@ body {
   border: 1px solid black;
   padding: 1rem;
   background-color: #EFE7DA;
+  font-family: 'Roboto';
 }
 .main-container header {
   width: 100%;
@@ -164,7 +186,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid black;
 }
 .main-container header nav .nav-item {
   text-decoration: none;
@@ -180,7 +201,6 @@ body {
 }
 .main-container header .two-columns .text-header-content {
   width: calc(100%/2);
-  border: 1px solid black;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -188,13 +208,15 @@ body {
 }
 .main-container header .two-columns .text-header-content .title,
 .main-container header .two-columns .text-header-content .intro {
-  border: 1px solid black;
   height: calc(100%/2 - 1rem);
 }
 .main-container header .two-columns .img-header-content {
   display: flex;
   width: calc(100%/2);
-  border: 1px solid black;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .main-container h1 {
   font-size: 3rem;
@@ -202,8 +224,9 @@ body {
 }
 .main-container h2 {
   font-size: 1.75rem;
-  color: #E55812;
+  color: #002626;
 }
 .main-container h3 {
   font-size: 1rem;
+  color: #E55812;
 }

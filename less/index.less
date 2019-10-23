@@ -55,10 +55,10 @@ table {
 @sm-font-size: 1.0rem;
 @title-color: #0E4749; // Jungle green
 @subtitle-color: #E55812; // Flame red
+@section-color: #002626; // Dark green
 @container-bk-color: #EFE7DA; // Eggshell
 
 /* Mixins */
-
 // Positional mixins
 .flex {
 	display: flex;
@@ -76,8 +76,10 @@ table {
 	align-items: center;
 }
 
-// Color and font mixins
-
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Helvetica&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Georgia&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -96,6 +98,7 @@ html, body {
 	border: 1px solid black;
 	padding: 1rem;
 	background-color: @container-bk-color;
+	font-family: 'Roboto';
 
 	header {
 		width: 100%;
@@ -103,7 +106,6 @@ html, body {
 		nav {
 			.nav-items {
 				.centered-around();
-				border: 1px solid black;
 			}
 
 			.nav-item {
@@ -123,14 +125,12 @@ html, body {
 
 			.text-header-content {
 				width: calc(100%/2);
-				border: 1px solid black;
 				padding: 1.0rem;
 				.flex();
 				flex-direction: column;
 				justify-content: space-between;
 
 				.title, .intro {
-					border: 1px solid black;
 					height: calc(100%/2 - 1.0rem);
 				}
 			}
@@ -138,7 +138,11 @@ html, body {
 			.img-header-content {
 				.flex();
 				width: calc(100%/2);
-				border: 1px solid black;
+				position: relative;
+				height: 100%;
+				overflow: hidden;
+				border-radius: 50%
+
 			}
 		}
 	}
@@ -150,10 +154,11 @@ html, body {
 
 	h2 {
 		font-size: @md-font-size;
-		color: @subtitle-color;
+		color: @section-color;
 	}
 
 	h3 {
 		font-size: @sm-font-size;
+		color: @subtitle-color;
 	}
 }

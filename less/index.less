@@ -103,6 +103,7 @@ html, body {
 
 	header {
 		width: 100%;
+		border-bottom: 2px solid @section-color;
 
 		nav {
 			.nav-items {
@@ -176,6 +177,29 @@ html, body {
 		}
 	}
 
+	.main-content {
+		.flex();
+		padding-top: 1.0rem;
+		
+		.content-column {
+			.flex();
+			flex-direction: column;
+		
+			.content-tile{
+				margin: 1rem 0rem;
+				border-bottom: 1px solid darkgreen;
+
+				p {
+					line-height: 1.33rem;
+				}
+			}
+
+			h2 {
+				padding-top: 1.0rem 0rem;
+			}
+		}
+	}
+
 	h1 {
 		font-size: @lg-font-size;
 		color: @title-color;
@@ -190,4 +214,6 @@ html, body {
 		font-size: @sm-font-size;
 		color: @subtitle-color;
 	}
+
+
 }

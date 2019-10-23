@@ -181,6 +181,7 @@ body {
 }
 .main-container header {
   width: 100%;
+  border-bottom: 2px solid #002626;
 }
 .main-container header nav .nav-items {
   display: flex;
@@ -239,6 +240,24 @@ body {
 .main-container header .two-columns .img-header-content img {
   display: inline;
   margin: 0 auto;
+}
+.main-container .main-content {
+  display: flex;
+  padding-top: 1rem;
+}
+.main-container .main-content .content-column {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .main-content .content-column .content-tile {
+  margin: 1rem 0rem;
+  border-bottom: 1px solid darkgreen;
+}
+.main-container .main-content .content-column .content-tile p {
+  line-height: 1.33rem;
+}
+.main-container .main-content .content-column h2 {
+  padding-top: 1rem 0rem;
 }
 .main-container h1 {
   font-size: 5rem;

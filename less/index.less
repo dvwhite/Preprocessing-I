@@ -60,6 +60,8 @@ table {
 @subtitle-color: #E55812; // Flame red
 @section-color: #002626; // Dark green
 @container-bk-color: #EFE7DA; // Eggshell
+//Font
+@main-font: 'Roboto Slab';
 
 /* Mixins */
 // Positional mixins
@@ -104,11 +106,10 @@ html, body {
 	border: 1px solid black;
 	padding: 2rem 3rem;
 	background-color: @container-bk-color;
-	font-family: 'Roboto Slab';
+	font-family: @main-font;
 
 	header {
 		width: 100%;
-		border-bottom: 2px solid @section-color;
 
 		nav {
 			.nav-items {
@@ -214,6 +215,8 @@ html, body {
 	.main-content {
 		.flex();
 		padding-top: 1%;
+		border-top: 2px solid @section-color;
+		border-bottom: 2px solid @section-color;
 		
 		.content-column {
 			.flex();

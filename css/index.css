@@ -389,6 +389,9 @@ body {
   font-size: 1rem;
   color: #E55812;
 }
+.main-container .main-content .education {
+  margin-top: 2.5%;
+}
 @media screen and (max-width: 500px) {
   .main-container .main-content {
     margin-top: 10%;

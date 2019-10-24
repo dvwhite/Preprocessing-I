@@ -1,1 +1,413 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Mixins */
+.flex {
+  display: flex;
+}
+@media screen and (max-width: 500px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .center {
+    flex-direction: column;
+  }
+}
+.centered-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .centered-around {
+    flex-direction: column;
+  }
+}
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Helvetica LT Pro'), local('HelveticaLTPro-Roman'), url(https://fonts.gstatic.com/l/font?kit=JIAxUVNqfH9WuVQQRM4zVxOi&skey=22efecd2bc0e2cb0&v=v3) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(https://fonts.gstatic.com/s/robotoslab/v9/BngMUXZYTXPIvIBgJJSb6ufN5qA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+.main-container {
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 2rem 3rem;
+  background-color: #EFE7DA;
+  font-family: 'Roboto Slab';
+}
+.main-container header {
+  width: 100%;
+}
+.main-container header nav .nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2%;
+}
+@media screen and (max-width: 500px) {
+  .main-container header nav .nav-items {
+    flex-direction: column;
+  }
+}
+.main-container header nav .nav-item {
+  text-decoration: none;
+  font-size: calc(2rem - 50%);
+  color: black;
+}
+.main-container header nav .nav-item:hover {
+  color: #E55812;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+.main-container header .two-columns {
+  display: flex;
+  margin: 1% 0;
+  max-height: 100%;
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns {
+    flex-direction: column;
+  }
+}
+.main-container header .two-columns .text-header-content {
+  width: calc(100%/2);
+  padding-right: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .text-header-content {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .text-header-content {
+    width: 100%;
+  }
+}
+.main-container header .two-columns .text-header-content .title {
+  text-align: center;
+  height: calc(100%/2 - 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .text-header-content .title {
+    flex-direction: column;
+  }
+}
+.main-container header .two-columns .text-header-content .title h1 {
+  font-size: 5rem;
+  color: #0E4749;
+}
+.main-container header .two-columns .text-header-content .title h3 {
+  font-size: 2rem;
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .text-header-content .title {
+    padding-top: 5%;
+  }
+}
+.main-container header .two-columns .text-header-content .intro h2 {
+  font-size: 2rem;
+  color: #002626;
+  padding: 1% 0;
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .text-header-content .intro h2 {
+    text-align: center;
+  }
+}
+.main-container header .two-columns .text-header-content .intro p {
+  line-height: 1.33rem;
+  padding: 0 1%;
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .text-header-content .intro p {
+    font-size: calc(1rem - 10%);
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .text-header-content .intro {
+    padding: 10% 0 5% 0%;
+  }
+}
+.main-container header .two-columns .img-header-content {
+  display: flex;
+  width: calc(100%/2);
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #002626;
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .img-header-content {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .img-header-content {
+    width: 100%;
+  }
+}
+.main-container header .two-columns .img-header-content img {
+  display: inline;
+  margin: 0 auto;
+}
+@media screen and (width: 500px) {
+  .main-container header .two-columns {
+    flex-direction: column-reverse;
+  }
+}
+.main-container .main-content {
+  display: flex;
+  padding-top: 1%;
+  border-top: 2px solid #002626;
+  border-bottom: 2px solid #002626;
+}
+@media screen and (max-width: 500px) {
+  .main-container .main-content {
+    flex-direction: column;
+  }
+}
+.main-container .main-content .content-column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1%;
+  width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .main-container .main-content .content-column {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-container .main-content .content-column {
+    width: 100%;
+  }
+}
+.main-container .main-content .content-column .content-tile {
+  margin: 2% 1%;
+  border-bottom: 1px dashed darkgreen;
+}
+.main-container .main-content .content-column .content-tile p {
+  line-height: 1.33rem;
+}
+.main-container .main-content .content-column .content-tile .single-line {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  .main-container .main-content .content-column .content-tile .single-line {
+    flex-direction: column;
+  }
+}
+.main-container .main-content .content-column .content-tile .single-line .dates p {
+  font-weight: bold;
+}
+.main-container .main-content .content-column .content-tile .skills-items li {
+  padding: 1%;
+  font-style: italic;
+  border-bottom: 1px solid black;
+  width: 70%;
+}
+.main-container .main-content .content-column .content-tile .skills-items li:last-child {
+  border-bottom: none;
+}
+.main-container .main-content .content-column h2 {
+  padding-top: 1rem 0rem;
+  font-size: 2rem;
+  color: #002626;
+}
+@media screen and (max-width: 500px) {
+  .main-container .main-content .content-column h2 {
+    margin-top: 7.5%;
+  }
+}
+.main-container .main-content .content-column h3 {
+  font-size: 1rem;
+  color: #E55812;
+}
+.main-container .main-content .education {
+  margin-top: 2.5%;
+}
+@media screen and (max-width: 500px) {
+  .main-container .main-content {
+    margin-top: 10%;
+  }
+}
+.main-container .contact {
+  margin: 1% 0;
+}
+.main-container .contact a {
+  text-decoration: none;
+  color: #E55812;
+}
+@media screen and (max-width: 500px) {
+  .main-container .contact {
+    margin-top: 5%;
+  }
+}

@@ -265,6 +265,11 @@ body {
 .main-container header .two-columns .text-header-content .title h3 {
   font-size: 2rem;
 }
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .text-header-content .title {
+    padding-top: 5%;
+  }
+}
 .main-container header .two-columns .text-header-content .intro {
   height: calc(100%/2 - 1rem);
 }
@@ -285,6 +290,11 @@ body {
 @media screen and (max-width: 500px) {
   .main-container header .two-columns .text-header-content .intro p {
     font-size: calc(1rem - 10%);
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-container header .two-columns .text-header-content .intro {
+    padding: 10% 0 5% 0%;
   }
 }
 .main-container header .two-columns .img-header-content {
@@ -370,10 +380,29 @@ body {
   font-size: 2rem;
   color: #002626;
 }
+@media screen and (max-width: 500px) {
+  .main-container .main-content .content-column h2 {
+    margin-top: 7.5%;
+  }
+}
 .main-container .main-content .content-column h3 {
   font-size: 1rem;
   color: #E55812;
 }
+@media screen and (max-width: 500px) {
+  .main-container .main-content {
+    margin-top: 10%;
+  }
+}
 .main-container .contact {
   margin: 1% 0;
+}
+.main-container .contact a {
+  text-decoration: none;
+  color: #E55812;
+}
+@media screen and (max-width: 500px) {
+  .main-container .contact {
+    margin-top: 5%;
+  }
 }

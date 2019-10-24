@@ -160,6 +160,11 @@ html, body {
 					h3 {
 						font-size: @subtitle-font-size;
 					}
+
+					@media screen and (max-width: 500px) {
+						padding-top: 5%;
+					}
+
 				}
 
 				.intro {
@@ -185,11 +190,12 @@ html, body {
 							font-size: calc(@sm-font-size - 10%);
 						}
 					}
+
+					@media screen and (max-width: 500px) {
+						padding: 10% 0 5% 0%;
+					}
 				}
-
-
 			}
-
 			.img-header-content {
 				.flex();
 				width: calc(100%/2);
@@ -266,6 +272,10 @@ html, body {
 				padding-top: 1.0rem 0rem;
 				font-size: @md-font-size;
 				color: @section-color;
+
+				@media screen and (max-width: 500px) {
+					margin-top: 7.5%;
+				}
 			}
 
 			h3 {
@@ -273,10 +283,23 @@ html, body {
 				color: @subtitle-color;
 			}
 		}
+
+		@media screen and (max-width: 500px) {
+			margin-top: 10%;
+		}
 	}
 
 	.contact {
 		margin: 1% 0;
+
+		a {
+			text-decoration: none;
+			color: @subtitle-color;
+		}
+
+		@media screen and (max-width: 500px) {
+			margin-top: 5%;
+		}
 	}
 
 }

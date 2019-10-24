@@ -168,8 +168,6 @@ html, body {
 				}
 
 				.intro {
-					height: calc(100%/2 - 1.0rem);
-					
 
 					h2 {
 						font-size: @md-font-size;
@@ -214,6 +212,10 @@ html, body {
 					margin: 0 auto;
 				}
 
+			}
+
+			@media screen and (width: 500px) {
+				flex-direction: column-reverse;
 			}
 		}
 	}

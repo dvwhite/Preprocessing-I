@@ -270,9 +270,6 @@ body {
     padding-top: 5%;
   }
 }
-.main-container header .two-columns .text-header-content .intro {
-  height: calc(100%/2 - 1rem);
-}
 .main-container header .two-columns .text-header-content .intro h2 {
   font-size: 2rem;
   color: #002626;
@@ -319,6 +316,11 @@ body {
 .main-container header .two-columns .img-header-content img {
   display: inline;
   margin: 0 auto;
+}
+@media screen and (width: 500px) {
+  .main-container header .two-columns {
+    flex-direction: column-reverse;
+  }
 }
 .main-container .main-content {
   display: flex;
